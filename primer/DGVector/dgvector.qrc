@@ -1,0 +1,52 @@
+<RCC>
+    <qresource prefix="/lang/ru">
+        <file>resource/dgvector_ru.qm</file>
+    </qresource>
+    <qresource prefix="/templ">
+        <file>resource/template.html</file>
+    </qresource>
+    <qresource prefix="/pic">
+        <file>resource/pic/open.png</file>
+        <file>resource/pic/save.png</file>
+        <file>resource/pic/exit.png</file>
+        <file>resource/pic/reload.png</file>
+        <file>resource/pic/search.png</file>
+        <file>resource/pic/filenew.png</file>
+        <file>resource/pic/run.png</file>
+        <file>resource/pic/setting.png</file>
+        <file>resource/pic/info.png</file>
+        <file>resource/pic/import.png</file>
+        <file>resource/pic/printer.png</file>
+        <file>resource/pic/network_24.png</file>
+        <file>resource/pic/vector.png</file>
+        <file>resource/pic/clear.png</file>
+        <file>resource/pic/vector_en.png</file>
+        <file>resource/pic/vector_dis.png</file>
+        <file>resource/pic/remove.png</file>
+        <file>resource/pic/play.png</file>
+        <file>resource/pic/pause.png</file>
+        <file>resource/pic/connect.png</file>
+        <file>resource/pic/vector_wait.png</file>
+        <file>resource/pic/vector_con.png</file>
+        <file>resource/pic/leftright.png</file>
+        <file>resource/pic/xclock.png</file>
+        <file>resource/pic/curve.png</file>
+        <file>resource/pic/database_refresh.png</file>
+        <file>resource/pic/xclock_run.png</file>
+        <file>resource/pic/xclock_dis.png</file>
+        <file>resource/pic/database_gear.png</file>
+        <file>resource/pic/database_go.png</file>
+        <file>resource/pic/database_error.png</file>
+        <file>resource/pic/database_save.png</file>
+        <file>resource/pic/disconnect.png</file>
+        <file>resource/pic/question.png</file>
+        <file>resource/pic/vector_disconnect.png</file>
+        <file>resource/pic/spectr.png</file>
+        <file>resource/pic/go-previous.png</file>
+        <file>resource/pic/user.png</file>
+    </qresource>
+    <qresource prefix="/hml">
+        <file>resource/devices.xsd</file>
+        <file>resource/devices.xml</file>
+    </qresource>
+</RCC>

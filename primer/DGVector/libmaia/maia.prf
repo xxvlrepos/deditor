@@ -1,0 +1,10 @@
+
+INCLUDEPATH += $$PWD/
+
+unix: {
+  release {LIBS += $$PWD/libmaia.a }
+      else{LIBS += $$PWD/libmaiad.a }
+}else{
+	include($$PWD/maia.pri)
+}
+QT   += xml network

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings ver="3.1.4" xsi:noNamespaceSchemaLocation="settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <client timeOut="100" samplingIdle="5000" samplingRate="500" repeat="2"/>
+</settings>

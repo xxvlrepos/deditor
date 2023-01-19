@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="org.eclipse.cdt.core.default.config.968190792">
+			<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="org.eclipse.cdt.core.default.config.968190792" moduleId="org.eclipse.cdt.core.settings" name="Configuration">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="Qt Release Build" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildTarget>release</buildTarget>
+				<stopOnError>false</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="Qt Debug Build" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildTarget>debug</buildTarget>
+				<stopOnError>false</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtKmsSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuickInput" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuick" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtGlxSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtThemeSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtAccessibilitySupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuick" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtEventDispatcherSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtDBus" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtFbSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtWebChannel" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtUiTools" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuickTest" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtPlatformHeaders" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtSvg" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtFontDatabaseSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DExtras" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtUiPlugin" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtXmlPatterns" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtPrintSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuickTemplates2" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtConcurrent" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuickWidgets" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtHelp" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtGamepad" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DInput" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtWebView" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtNfc" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtMultimediaQuick_p" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtBluetooth" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtOpenGLExtensions" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQmlDebug" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtDesignerComponents" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtInputSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DAnimation" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtDeviceDiscoverySupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuickControls2" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtNetwork" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQml" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtGui" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtEglFSDeviceIntegration" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuickScene2D" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtDesigner" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DRender" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuickRender" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtSerialPort" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DCore" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtServiceSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtSensors" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtPlatformCompositorSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtPositioning" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtMultimediaWidgets" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtSerialBus" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtXml" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtX11Extras" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuickExtras" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtCore" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtMultimedia" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtOpenGL" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtScxml" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtQuickParticles" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtSql" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtLocation" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtPacketProtocol" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtWidgets" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtTest" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DQuickAnimation" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtLinuxAccessibilitySupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtEglSupport" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="QtWebSockets" kind="inc" path="" system="true"/>
+		<pathentry base-path="/home/tim/Qt/5.9.9/gcc_64/include" include="Qt3DLogic" kind="inc" path="" system="true"/>
+		<pathentry kind="src" path=""/>
+		<pathentry kind="out" path=""/>
+	</storageModule>
+</cproject>

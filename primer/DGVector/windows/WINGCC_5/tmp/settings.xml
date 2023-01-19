@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings xsi:noNamespaceSchemaLocation="settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ver="3.1.4">
+ <client timeOut="100" samplingIdle="5000" samplingRate="500" repeat="2">
+  <UDP id="16c621c92c7c109f" modbus="1" ipaddr="127.0.0.1" alias="" port="502"/>
+  <TCP ipaddr="127.0.0.1" fullMirror="0" port="502"/>
+ </client>
+ <sdiag minutes="*" hours="*"/>
+</settings>

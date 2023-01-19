@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings ver="2.13.0" xsi:noNamespaceSchemaLocation="settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <server ipListen="127.0.0.1" port="502" maxNumConn="10">
+  <allowedIP firstIP="127.0.0.1"/>
+ </server>
+ <client samplingIdle="5000" timeOut="100" samplingRate="500" repeat="2"/>
+ <dbsrv type="NONE" ipaddr="127.0.0.1" base="dgserver" passwd="" port="3306" user="root" histdata="0"/>
+</settings>

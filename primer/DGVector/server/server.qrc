@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/hml">
+        <file>resource/modbus.xsd</file>
+        <file>resource/modbus.xml</file>
+        <file>resource/settings.xsd</file>
+        <file>resource/settings.xml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<modbus ver="2.14.0" xsi:noNamespaceSchemaLocation="modbus.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <T s1="1400" s2="1410" s3="1420">
+  <data id="02" dimension="об/мин" name="F" read="1" title="Обороты" divider="1"/>
+  <data id="0B" dimension="-" name="ZON" read="0" title="Зоны" divider="1"/>
+  <data id="100A" dimension="-" name="EV_F" read="0" title="События" divider="1"/>
+  <data id="1004" dimension="об/мин" name="F.1H" read="1" title="Уставка F.1H" divider="1"/>
+  <data id="1005" dimension="об/мин" name="F.2H" read="1" title="Уставка F.2H" divider="1"/>
+  <data id="1006" dimension="об/мин" name="F.3H" read="1" title="Уставка F.3H" divider="1"/>
+ </T>
+ <A s1="1000" s5="1700" s2="1100" s3="1200" s4="1300" s6="1800">
+  <data id="19" dimension="m/c^2" name="Ae" read="1" title="СКЗ ускорения" divider="100"/>
+  <data id="1A" dimension="-" name="A_pf" read="1" title="Пик-фактор СКЗ Ускор." divider="100"/>
+  <data id="79" dimension="m/c^2" name="Ap" read="0" title="Амплитуда ускорения" divider="100"/>
+  <data id="82" dimension="m/c^2" name="App" read="0" title="Размах ускорения" divider="100"/>
+  <data id="01" dimension="mm/c" name="Ve" read="1" title="СКЗ виброскорости" divider="10"/>
+  <data id="02" dimension="mm/c" name="Ve_n" read="1" title="СКЗ НЧ скорости" divider="10"/>
+  <data id="04" dimension="-" name="V_pf" read="1" title="Пик-фактор Скор." divider="100"/>
+  <data id="90" dimension="mm/c" name="Vp" read="0" title="Амплитуда скорости" divider="10"/>
+  <data id="A9" dimension="mm/c" name="Vаe" read="0" title="Эквивал.Ампл.скорости" divider="10"/>
+  <data id="05" dimension="mm/c" name="Vp_R1" read="1" title="Амп.Ск.1-й об." divider="10"/>
+  <data id="06" dimension="град" name="Vfi_R1" read="1" title="Фаза.Ск.1-й об." divider="1"/>
+  <data id="07" dimension="mm/c" name="Vp_R2" read="1" title="Амп.Ск.2-й об." divider="10"/>
+  <data id="08" dimension="град" name="Vfi_R2" read="1" title="Фаза.Ск.2-й об." divider="1"/>
+  <data id="46" dimension="mm/c" name="Vp_R3" read="1" title="Амп.Ск.3-й об." divider="10"/>
+  <data id="47" dimension="mm/c" name="Vp_R4" read="1" title="Амп.Ск.4-й об." divider="10"/>
+  <data id="48" dimension="mm/c" name="Vp_R5" read="0" title="Амп.Ск.5-й об." divider="10"/>
+  <data id="49" dimension="mm/c" name="Vp_R6" read="0" title="Амп.Ск.6-й об." divider="10"/>
+  <data id="4A" dimension="mm/c" name="Vp_R7" read="0" title="Амп.Ск.7-й об." divider="10"/>
+  <data id="4B" dimension="mm/c" name="Vp_R8" read="0" title="Амп.Ск.8-й об." divider="10"/>
+  <data id="4C" dimension="mm/c" name="Vp_R9" read="0" title="Амп.Ск.9-й об." divider="10"/>
+  <data id="5B" dimension="mm/c" name="Ve1_n" read="0" title="10Гц-0,7*F1,СКЗ" divider="10"/>
+  <data id="5C" dimension="mm/c" name="Ve1_R0d5" read="0" title="0.5*F1,СКЗ" divider="10"/>
+  <data id="5D" dimension="mm/c" name="Ve1_R1" read="1" title="1*F1,СКЗ" divider="10"/>
+  <data id="5E" dimension="mm/c" name="Ve1_R1d5" read="0" title="1.5*F1,СКЗ" divider="10"/>
+  <data id="5F" dimension="mm/c" name="Ve1_R2" read="0" title="2*F1,СКЗ" divider="10"/>
+  <data id="60" dimension="mm/c" name="Ve1_R2d5" read="0" title="2.5*F1,СКЗ" divider="10"/>
+  <data id="61" dimension="mm/c" name="Ve1_R3" read="0" title="3*F1,СКЗ" divider="10"/>
+  <data id="62" dimension="mm/c" name="Ve1_R4" read="0" title="4*F1,СКЗ" divider="10"/>
+  <data id="64" dimension="mm/c" name="Ve1_R7R12" read="0" title="7-12*F1,СКЗ" divider="10"/>
+  <data id="65" dimension="mm/c" name="Ve2_n" read="0" title="10Гц-0,7*F2,СКЗ" divider="10"/>
+  <data id="66" dimension="mm/c" name="Ve2_R0d5" read="0" title="0.5*F2,СКЗ" divider="10"/>
+  <data id="67" dimension="mm/c" name="Ve2_R1" read="0" title="1*F2,СКЗ" divider="10"/>
+  <data id="68" dimension="mm/c" name="Ve2_R1d5" read="0" title="1.5*F2,СКЗ" divider="10"/>
+  <data id="69" dimension="mm/c" name="Ve2_R2" read="0" title="2*F2,СКЗ" divider="10"/>
+  <data id="6A" dimension="mm/c" name="Ve2_R2d5" read="0" title="2.5*F2,СКЗ" divider="10"/>
+  <data id="6B" dimension="mm/c" name="Ve2_R3" read="0" title="3*F2,СКЗ" divider="10"/>
+  <data id="6C" dimension="mm/c" name="Ve2_R4" read="0" title="4*F2,СКЗ " divider="10"/>
+  <data id="6E" dimension="mm/c" name="Ve2_R7R12" read="0" title="7-12*F2,СКЗ" divider="10"/>
+  <data id="6F" dimension="mm/c" name="Ve3_n" read="0" title="10Гц-0,7*F3,СКЗ" divider="10"/>
+  <data id="70" dimension="mm/c" name="Ve3_R0d5" read="0" title="0.5*F3,СКЗ" divider="10"/>
+  <data id="71" dimension="mm/c" name="Ve3_R1" read="0" title="1*F3,СКЗ" divider="10"/>
+  <data id="72" dimension="mm/c" name="Ve3_R1d5" read="0" title="1.5*F3,СКЗ" divider="10"/>
+  <data id="73" dimension="mm/c" name="Ve3_R2" read="0" title="2*F3,СКЗ" divider="10"/>
+  <data id="74" dimension="mm/c" name="Ve3_R2d5" read="0" title="2.5*F3,СКЗ" divider="10"/>
+  <data id="75" dimension="mm/c" name="Ve3_R3" read="0" title="3*F3,СКЗ" divider="10"/>
+  <data id="76" dimension="mm/c" name="Ve3_R4" read="0" title="4*F3,СКЗ " divider="10"/>
+  <data id="78" dimension="mm/c" name="Ve3_R7R12" read="0" title="7-12*F3,СКЗ" divider="10"/>
+  <data id="03" dimension="mkm" name="Spp" read="0" title="Размах перемещения" divider="1"/>
+  <data id="1B" dimension="mkm" name="Se" read="0" title="СКЗ перемещения" divider="1"/>
+  <data id="1C" dimension="-" name="S_pf" read="0" title="Пик-фактор перемещения" divider="100"/>
+  <data id="56" dimension="об/мин" name="F1" read="1" title="Частота ведущего вала" divider="1"/>
+  <data id="58" dimension="об/мин" name="F2" read="0" title="Частота ведомого вала" divider="1"/>
+  <data id="5A" dimension="об/мин" name="F3" read="0" title="Частота зубозацепления" divider="1"/>
+  <data id="10F1" dimension="-" name="EV_Ve" read="0" title="События Ve" divider="1"/>
+  <data id="10F2" dimension="-" name="EV_Ve_n" read="0" title="События NVe" divider="1"/>
+  <data id="10F3" dimension="-" name="EV_Spp" read="0" title="События Spp" divider="1"/>
+  <data id="10F4" dimension="-" name="EV_Ae" read="0" title="События Ae" divider="1"/>
+  <data id="10F5" dimension="-" name="EV_Vp" read="0" title="События Vp" divider="1"/>
+  <data id="10F6" dimension="-" name="EV_Vаe" read="0" title="События Vpe" divider="1"/>
+  <data id="10F7" dimension="-" name="EV_Ap" read="0" title="События Ap" divider="1"/>
+  <data id="10F8" dimension="-" name="EV_App" read="0" title="События App" divider="1"/>
+  <data id="8F" dimension="bit" name="STAT" read="0" title="Статус работы" divider="1"/>
+  <data id="1004" dimension="mm/c" name="Ve.1H" read="1" title="Уставка Ve.1H" divider="10"/>
+  <data id="1005" dimension="mm/c" name="Ve.2H" read="1" title="Уставка Ve.2H" divider="10"/>
+  <data id="1006" dimension="mm/c" name="Ve.3H" read="1" title="Уставка Ve.3H" divider="10"/>
+ </A>
+ <C s1="1000" s5="1700" s2="1100" s3="1200" s4="1300" s6="1800">
+  <data id="1E" dimension="mkm" name="Spp" read="1" title="Размах перемещения" divider="1"/>
+  <data id="1B" dimension="mkm" name="Se" read="0" title="СКЗ перемещения" divider="1"/>
+  <data id="1C" dimension="" name="S_pf" read="1" title="Пик-фактор перемещения" divider="100"/>
+  <data id="20" dimension="mkm" name="Sp_R1" read="1" title="Ампл.Пер. 1-й Обор." divider="1"/>
+  <data id="21" dimension="град" name="Sfi_R1" read="1" title="Фаза.Пер. 1-й Обор." divider="1"/>
+  <data id="22" dimension="mkm" name="Sp_R2" read="1" title="Ампл.Пер. 2-й Обор." divider="1"/>
+  <data id="23" dimension="град" name="Sfi_R2" read="1" title="Фаза.Пер. 2-й Обор." divider="1"/>
+  <data id="24" dimension="mkm" name="Sp_o" read="0" title="Разм.Перем.Оборот." divider="1"/>
+  <data id="25" dimension="mkm" name="Sp_t" read="0" title="Ампл.Перем.Времен" divider="1"/>
+  <data id="4D" dimension="mkm" name="Sp_R3" read="1" title="Ампл.Пер. 3-й Обор." divider="1"/>
+  <data id="4E" dimension="mkm" name="Sp_R4" read="1" title="Ампл.Пер. 4-й Обор." divider="1"/>
+  <data id="4F" dimension="mkm" name="Sp_R5" read="0" title="Ампл.Пер. 5-й Обор." divider="1"/>
+  <data id="50" dimension="mkm" name="Sp_R6" read="0" title="Ампл.Пер. 6-й Обор." divider="1"/>
+  <data id="51" dimension="mkm" name="Sp_R7" read="0" title="Ампл.Пер. 7-й Обор." divider="1"/>
+  <data id="52" dimension="mkm" name="Sp_R8" read="0" title="Ампл.Пер. 8-й Обор." divider="1"/>
+  <data id="53" dimension="mkm" name="Sp_R9" read="0" title="Ампл.Пер. 9-й Обор." divider="1"/>
+  <data id="1D" dimension="mkm" name="Z" read="1" title="Зазор" divider="1"/>
+  <data id="56" dimension="об/мин" name="F1" read="1" title="Об привед. 1 тх." divider="1"/>
+  <data id="1F" dimension="n" name="Nz" read="0" title="Номер оборотной зоны" divider="1"/>
+  <data id="10F1" dimension="-" name="EV_Spp" read="0" title="Событие Spp" divider="1"/>
+  <data id="10F2" dimension="-" name="EV_Sp" read="0" title="Событие Sp" divider="1"/>
+  <data id="10F3" dimension="-" name="EV_Z" read="0" title="Событие Z" divider="1"/>
+  <data id="10F4" dimension="-" name="EV_Se" read="0" title="Событие Se" divider="1"/>
+  <data id="8F" dimension="bit" name="STAT" read="1" title="Статус работы" divider="1"/>
+  <data id="1004" dimension="mkm" name="Spp.1H" read="1" title="Уставка Spp.1H" divider="1"/>
+  <data id="1005" dimension="mkm" name="Spp.2H" read="1" title="Уставка Spp.2H" divider="1"/>
+  <data id="1006" dimension="mkm" name="Spp.3H" read="1" title="Уставка Spp.3H" divider="1"/>
+ </C>
+ <D s1="1000" s5="1700" s2="1100" s3="1200" s4="1300" s6="1800">
+  <data id="1D" dimension="mkm" name="Z" read="1" title="Зазор" divider="1"/>
+  <data id="10F1" dimension="-" name="EV_Z" read="0" title="Событие Z" divider="1"/>
+  <data id="8F" dimension="bit" name="STAT" read="1" title="Статус работы" divider="1"/>
+  <data id="1001" dimension="mkm" name="Z.3L" read="1" title="Уставка Z.3L" divider="1"/>
+  <data id="1002" dimension="mkm" name="Z.2L" read="1" title="Уставка Z.2L" divider="1"/>
+  <data id="1003" dimension="mkm" name="Z.1L" read="1" title="Уставка Z.1L" divider="1"/>
+  <data id="1004" dimension="mkm" name="Z.1H" read="1" title="Уставка Z.1H" divider="1"/>
+  <data id="1005" dimension="mkm" name="Z.2H" read="1" title="Уставка Z.2H" divider="1"/>
+  <data id="1006" dimension="mkm" name="Z.3H" read="1" title="Уставка Z.3H" divider="1"/>
+ </D>
+ <I s1="1000">
+  <data id="1D" dimension="mkm" name="Z" read="1" title="Зазор" divider="1"/>
+  <data id="1E" dimension="mkm" name="I" read="1" title="Искривление вала" divider="1"/>
+  <data id="1F" dimension="-" name="Ob" read="1" title="Зона" divider="1"/>
+  <data id="10F1" dimension="-" name="EV_S1" read="0" title="Событие S1" divider="1"/>
+  <data id="10F2" dimension="-" name="EV_S2" read="0" title="Событие S2" divider="1"/>
+  <data id="10F3" dimension="-" name="EV_Z" read="0" title="Событие Z" divider="1"/>
+  <data id="8F" dimension="bit" name="STAT" read="1" title="Статус работы" divider="1"/>
+ </I>
+ <M s1="1000" s5="1700" s2="1100" s3="1200" s4="1300" s6="1800">
+  <data id="1D" dimension="mkm" name="Z" read="1" title="Зазор" divider="1"/>
+  <data id="8F" dimension="bit" name="STAT" read="1" title="Статус работы" divider="1"/>
+ </M>
+ <E s1="1500" s2="1510">
+  <data id="01" dimension="mm/с" name="Ve2xy" read="1" title="СКЗ виброскорости вект." divider="10"/>
+  <data id="100A" dimension="-" name="EV_Ve2xy" read="0" title="Событие Vexy" divider="1"/>
+  <data id="1004" dimension="mm/с" name="Ve2xy.1H" read="1" title="Уставка Ve2xy.1H" divider="1"/>
+  <data id="1005" dimension="mm/с" name="Ve2xy.2H" read="1" title="Уставка Ve2xy.2H" divider="1"/>
+  <data id="1006" dimension="mm/с" name="Ve2xy.3H" read="1" title="Уставка Ve2xy.3H" divider="1"/>
+ </E>
+ <F s1="1600" s2="1610">
+  <data id="01" dimension="mkm" name="Sp2xy" read="1" title="Размах виброперемещения вект." divider="1"/>
+  <data id="0F0A" dimension="-" name="EV_Sp2xy" read="0" title="Событие Sp2xy" divider="1"/>
+  <data id="07" dimension="bit" name="STAT" read="1" title="Статус работы" divider="1"/>
+  <data id="0F04" dimension="mkm" name="Sp2xy.1H" read="1" title=" Уставка Sp2xy.1H" divider="1"/>
+  <data id="0F05" dimension="mkm" name="Sp2xy.2H" read="1" title=" Уставка Sp2xy.2H" divider="1"/>
+  <data id="0F06" dimension="mkm" name="Sp2xy.3H" read="1" title=" Уставка Sp2xy.3H" divider="1"/>
+ </F>
+ <N s1="1900" s2="1910" s3="1920">
+  <data id="01" dimension="С" name="T" read="1" title="Температура" divider="10"/>
+  <data id="100A" dimension="-" name="EV_T" read="0" title="События" divider="1"/>
+ </N>
+</modbus>

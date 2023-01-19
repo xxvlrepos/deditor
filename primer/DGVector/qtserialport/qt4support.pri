@@ -1,0 +1,16 @@
+
+
+QTSERIALPORT_PROJECT_QT4SUPPORT_INCLUDEDIR = $$PWD/src/serialport/qt4support/include
+QTSERIALPORT_PROJECT_QT4SUPPORT_SOURCES = $$PWD/src/serialport/qt4support/src  
+
+    INCLUDEPATH += \
+                   $$QTSERIALPORT_PROJECT_QT4SUPPORT_INCLUDEDIR \
+                   $$QTSERIALPORT_PROJECT_QT4SUPPORT_INCLUDEDIR/QtCore \
+                   $$QTSERIALPORT_PROJECT_QT4SUPPORT_INCLUDEDIR/private 
+    
+
+ unix:!symbian {
+    SOURCES += \
+        $$QTSERIALPORT_PROJECT_QT4SUPPORT_SOURCES/qlockfile.cpp \
+        $$QTSERIALPORT_PROJECT_QT4SUPPORT_SOURCES/qlockfile_unix.cpp
+  }  

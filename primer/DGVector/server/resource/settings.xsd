@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+   
+   <xsd:element name="settings" type="settingsType"/>
+  
+   <xsd:complexType name="settingsType">
+   	<xsd:sequence>
+   		<xsd:element maxOccurs="1" minOccurs="0" name="server" type="serverType"/>
+   		<xsd:element maxOccurs="1" minOccurs="0" name="opc_ua"  type="serverOPCUA"/>
+   		<xsd:element maxOccurs="1" minOccurs="1" name="client" type="clientType"/>	
+   		<xsd:element maxOccurs="1" minOccurs="0" name="osc" type="oscType"/>
+   		<xsd:element maxOccurs="1" minOccurs="0" name="sdiag" type="sdiagType"/>
+   		<xsd:element maxOccurs="1" minOccurs="0" name="dbsrv" type="dbType"/>
+   	</xsd:sequence>
+   	<xsd:attribute name="ver" type="xsd:string" use="optional"></xsd:attribute>
+   </xsd:complexType>   
+
+    <xsd:complexType name="serverOPCUA">
+    	<xsd:sequence>
+   			<xsd:element maxOccurs="unbounded" minOccurs="0" name="opcuser" type="usersData"/>
+   		</xsd:sequence> 
+     	<xsd:attribute name="port" default="43344" type="xsd:unsignedShort"/>
+   		<xsd:attribute ref="maxNumConn" use="required"/>    			
+   </xsd:complexType>
+   
+   <xsd:complexType name="serverType">
+   	<xsd:sequence>
+   		<xsd:element maxOccurs="unbounded" minOccurs="1" name="allowedIP" type="allowedIPType"/>
+   	</xsd:sequence>
+   	<xsd:attribute ref="ipListen" use="required"/>
+   	<xsd:attribute name="port" default="502" type="xsd:unsignedShort"/>
+   	<xsd:attribute ref="maxNumConn" use="required"/>   	
+   </xsd:complexType>
+
+   <xsd:complexType name="allowedIPType">
+   	<xsd:attribute default="127.0.0.1" name="firstIP" type="ipAddType"/>
+   	<xsd:attribute default="0.0.0.0" name="lastIP" type="ipAddType" use="optional"/>
+   </xsd:complexType>
+   
+   <xsd:complexType name="usersData">
+   	<xsd:attribute default="OpcUserName" name="login">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:pattern value="\w{3,30}"></xsd:pattern>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute default="" name="password">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:pattern value="\w{3,30}|\w{0}"></xsd:pattern>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   </xsd:complexType>
+   
+
+   <xsd:complexType name="clientType">
+	   	<xsd:sequence>
+	   	    <xsd:element maxOccurs="unbounded" minOccurs="0" name="UDP" type="UDPType"/>
+	   	    <xsd:element maxOccurs="unbounded" minOccurs="0" name="TCP" type="TCPType"/>
+	   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="COM485" type="COM485Type"/>
+	   	</xsd:sequence>
+	   	<xsd:attribute ref="samplingIdle" use="required"/>
+	   	<xsd:attribute ref="samplingRate" use="required"/>
+	   	<xsd:attribute ref="timeOut" use="required"/>
+	   	<xsd:attribute ref="repeat" use="required"/>
+	   	</xsd:complexType>
+    <xsd:complexType name="dbType">
+   	<xsd:attribute name="type" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:enumeration value="NONE"/>
+   				<xsd:enumeration value="MySQL"/>
+   				<xsd:enumeration value="PostgreSQL"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute ref="ipaddr" use="required"/>
+   	<xsd:attribute name="port" type="xsd:unsignedShort" default="0"/>
+   	<xsd:attribute ref="base" use="required"/>
+   	<xsd:attribute ref="user" use="required"/>
+   	<xsd:attribute name="passwd" type="xsd:string" use="required"/>
+   	<xsd:attribute ref="histdata" use="required"/>
+   </xsd:complexType>
+     
+   <xsd:complexType name="oscType">
+   	<xsd:sequence>
+   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="job" type="jobType"/>
+   	</xsd:sequence>
+   <xsd:attribute ref="lifetime"  use="required"/>
+   <xsd:attribute ref="repeatOSC" use="required"/>
+   </xsd:complexType>
+
+   <xsd:complexType name="jobType">
+   	<xsd:attribute name="label" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:maxLength value="15"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute ref="minutes" use="required"/>
+   	<xsd:attribute ref="hours" use="required"/>
+   	<xsd:attribute name="frequency" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:enumeration value="32000"/>
+   				<xsd:enumeration value="16000"/>
+   				<xsd:enumeration value="8000"/>
+   				<xsd:enumeration value="4000"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute name="resolution" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:enumeration value="0.25"/>
+   				<xsd:enumeration value="0.5"/>
+   				<xsd:enumeration value="1"/>
+   				<xsd:enumeration value="2"/>
+   				<xsd:enumeration value="4"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute ref="devises" use="required"/>   
+   	<xsd:attribute default="0" name="multiJobClose" type="xsd:boolean" use="optional"/>
+   </xsd:complexType>
+
+   <xsd:complexType name="sdiagType">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+   			<xsd:element name="A" type="aType" minOccurs="0"/>
+   			<xsd:element name="C" type="cType" minOccurs="0"/>
+ 		</xsd:choice>
+ 		<xsd:attribute ref="minutes" use="required"/>
+   	    <xsd:attribute ref="hours" use="required"/>
+   </xsd:complexType>
+
+   <xsd:complexType name="aType">
+     <xsd:sequence>
+   		<xsd:element name="diap" type="diapTypeA" minOccurs="0" maxOccurs="unbounded"/>
+  	</xsd:sequence>
+  	<xsd:attribute name="stype" type="xsd:string" fixed="A" use="required"/>
+  	<xsd:attributeGroup ref="spPar" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="cType">
+    <xsd:sequence>
+   		<xsd:element name="diap" type="diapTypeC" minOccurs="0" maxOccurs="unbounded"/>
+  	</xsd:sequence>
+   <xsd:attribute name="stype" type="xsd:string" fixed="C" use="required"/>
+   <xsd:attributeGroup ref="spPar"/> 
+  </xsd:complexType>
+
+  <xsd:complexType name="diapTypeA">
+  	<xsd:attributeGroup ref="diapPar"/> 
+  	 <xsd:attribute ref="rms" use="required" />
+  </xsd:complexType>
+
+  <xsd:complexType name="diapTypeC">
+  	<xsd:attributeGroup ref="diapPar" />
+  	<xsd:attribute name="rms" type="xsd:string" fixed="Se" use="required" />
+  </xsd:complexType>
+
+  <xsd:attributeGroup name="diapPar">
+  	<xsd:attribute name="label" use="required">
+  		<xsd:simpleType>
+  			<xsd:restriction base="xsd:string">
+  				<xsd:maxLength value="15" />
+  			</xsd:restriction>
+  		</xsd:simpleType>
+  	</xsd:attribute>
+  	<xsd:attribute ref="pin" use="required" />
+  	<xsd:attribute ref="size" use="required" />
+  	<xsd:attribute name="band" type="xsd:string" use="required" />
+  </xsd:attributeGroup>
+
+  <xsd:attribute name="pin" default="1">
+  		 <xsd:simpleType>
+	 		<xsd:restriction base="xsd:unsignedShort">
+	 				<xsd:minInclusive value="1"></xsd:minInclusive>
+	 				<xsd:maxInclusive value="2048"></xsd:maxInclusive>
+	 		</xsd:restriction>
+	 	</xsd:simpleType>
+   </xsd:attribute>
+   
+   <xsd:attribute name="size" default="1">
+  		 <xsd:simpleType>
+	 		<xsd:restriction base="xsd:unsignedShort">
+	 				<xsd:minInclusive value="1"></xsd:minInclusive>
+	 				<xsd:maxInclusive value="2048"></xsd:maxInclusive>
+	 		</xsd:restriction>
+	 	</xsd:simpleType>
+   </xsd:attribute>
+   
+   <xsd:attribute name="rms" default="Ae">
+   	<xsd:simpleType>
+   		<xsd:restriction base="xsd:string">
+   			<xsd:enumeration value="Ae"></xsd:enumeration>
+   			<xsd:enumeration value="Ve"></xsd:enumeration>
+   			<xsd:enumeration value="Se"></xsd:enumeration>
+   		</xsd:restriction>
+   	</xsd:simpleType>
+   </xsd:attribute>
+
+
+   <xsd:attributeGroup name="spPar">
+   	<xsd:attribute name="label" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:maxLength value="10" />
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+
+   	<xsd:attribute name="frequency" use="required">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:enumeration value="125" />
+   				<xsd:enumeration value="250" />
+   				<xsd:enumeration value="500" />
+   				<xsd:enumeration value="1000" />
+   				<xsd:enumeration value="2000" />
+   				<xsd:enumeration value="4000" />
+   				<xsd:enumeration value="8000" />
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	<xsd:attribute name="hemming" type="xsd:boolean"  default="0"/>
+   	<xsd:attribute ref="passes" use="required" />
+   	<xsd:attribute ref="devises" use="required" />
+   	<xsd:attribute name="resolution" type="xsd:string" use="required" />
+   </xsd:attributeGroup>
+
+
+
+   <xsd:complexType name="COM485Type">
+   	<xsd:sequence>
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="modbus" type="modbusType" />
+   	</xsd:sequence>
+   	<xsd:attribute ref="comAddr" use="required" />
+   	<xsd:attribute ref="speed" use="required" />
+   	<xsd:attribute ref="fullMirror" use="required" />
+   	<xsd:attribute ref="repeat" use="optional" />
+   	<xsd:attribute ref="samplingIdle" use="optional" />
+   	<xsd:attribute ref="samplingRate" use="optional" />
+   	<xsd:attribute ref="timeOut" use="optional" />
+   	<xsd:attribute ref="protocol" use="optional" />
+   
+   </xsd:complexType>
+
+   <xsd:complexType name="TCPType">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="unbounded" minOccurs="0" name="modbus" type="modbusType"/>
+    	</xsd:sequence>
+    	<xsd:attributeGroup ref="ipAd"/> 
+    	<xsd:attribute ref="fullMirror" use="required" />
+    	<xsd:attribute ref="repeat" use="optional" />
+    	<xsd:attribute ref="samplingIdle" use="optional"/>
+    	<xsd:attribute ref="samplingRate" use="optional"/>
+	   	<xsd:attribute ref="timeOut" use="optional"/>    			
+    </xsd:complexType>    
+     
+     <xsd:complexType name="UDPType"> 
+       	<xsd:attributeGroup ref="ipAd"/>
+        <xsd:attributeGroup ref="mAddr"/>
+    </xsd:complexType>
+ 
+    <xsd:complexType name="modbusType">    	
+    	<xsd:attributeGroup ref="mAddr"/>	
+    </xsd:complexType>
+    
+    <xsd:attribute default="10" name="maxNumConn" type="xsd:unsignedByte"/>
+    
+   	<xsd:attribute default="5000" name="samplingIdle">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedInt">
+   				<xsd:minInclusive value="1000"/>
+   				<xsd:maxInclusive value="300000"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="250" name="samplingRate">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedShort">
+   				<xsd:minInclusive value="20"/>
+   				<xsd:maxInclusive value="9999"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="100" name="timeOut">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedShort">
+   				<xsd:minInclusive value="50"/>
+   				<xsd:maxInclusive value="1000"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="0" name="repeat">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedByte">
+   				<xsd:minInclusive value="0"/>
+   				<xsd:maxInclusive value="99"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute> 
+   	
+   	<xsd:attribute default="5" name="repeatOSC">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedByte">
+   				<xsd:minInclusive value="0"/>
+   				<xsd:maxInclusive value="99"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>    
+
+    <xsd:attribute default="57600" name="speed">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:int">
+    				<xsd:enumeration value="9600"/>
+    				<xsd:enumeration value="19200"/>
+    				<xsd:enumeration value="38400"/>
+    				<xsd:enumeration value="57600"/>
+    				<xsd:enumeration value="115200"/>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    </xsd:attribute>    
+    
+	<xsd:attribute default="COM1" name="comAddr">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:string">
+    				<xsd:pattern value="(COM[1-9]|ttyS[0-9]|ttyUSB[0-9])"/>	
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    </xsd:attribute>
+    
+    <xsd:attribute default="*" name="minutes">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:string">
+    			<xsd:pattern value="(\*)|(0|60|[1-5][0-9]|[0-9])|(\*/(60|[1-5][0-9]|[1-9]))|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9]))|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9])/(60|[1-5][0-9]|[1-9]))|(((0|60|[1-5][0-9]|[1-9])|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9]))|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9])/(60|[1-5][0-9]|[1-9])))(,((0|60|[1-5][0-9]|[1-9])|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9]))|((0|60|[1-5][0-9]|[1-9])-(60|[1-5][0-9]|[1-9])/(60|[1-5][0-9]|[1-9]))))*)">
+    			</xsd:pattern>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>
+    
+    <xsd:attribute default="*" name="hours">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:string">
+    			<xsd:pattern value="(\*)|(0|2[0-4]|1[0-9]|[0-9])|(\*/(2[0-4]|1[0-9]|[1-9]))|((0|2[0-4]|1[0-9]|[1-9])-(2[0-4]|1[0-9]|[1-9]))|((0|2[0-4]|1[0-9]|[1-9])-(2[0-4]|1[0-9]|[1-9])/(2[0-4]|1[0-9]|[1-9]))|(((0|2|[0-4][0-9]|[1-9])|((0|2[0-4]|1[0-9]|[0-9])-(2[0-4]|1[0-9]|[1-9]))|((0|2[0-4]|1[0-9]|[0-9])-(2[0-4]|1[0-9]|[1-9])/(2[0-4]|1[0-9]|[1-9])))(,((0|2[0-4]|1[0-9]|[0-9])|((0|2[0-4]|1[0-9]|[0-9])-(2[0-4]|1[0-9]|[1-9]))|((0|2[0-4]|1[0-9]|[0-9])-(2[0-4]|1[0-9]|[1-9])/(2[0-4]|1[0-9]|[1-9]))))*)">
+    			</xsd:pattern>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>
+    
+    <xsd:attribute default="0" name="devises">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:pattern value="0|(((24[0-7]|2[0-3][0-9]|1[0-9][0-9]|[1-9][0-9]|[1-9]))(,(24[0-7]|2[0-3][0-9]|1[0-9][0-9]|[1-9][0-9]|[1-9]))*)"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>  
+   	
+   	<xsd:attribute default="24" name="lifetime">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedShort">
+   				<xsd:minInclusive value="1"/>
+   				<xsd:maxInclusive value="999"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="0" name="histdata">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:unsignedShort">
+   				<xsd:minInclusive value="0"/>
+   				<xsd:maxInclusive value="60"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="dgserver" name="base">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:minLength value="1"/>
+   				<xsd:maxLength value="10"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   	
+   	<xsd:attribute default="root" name="user">
+   		<xsd:simpleType>
+   			<xsd:restriction base="xsd:string">
+   				<xsd:minLength value="1"/>
+   				<xsd:maxLength value="15"/>
+   			</xsd:restriction>
+   		</xsd:simpleType>
+   	</xsd:attribute>
+   
+    <xsd:attribute default="0.0.0.0" name="ipListen">
+	    <xsd:simpleType>
+	    	<xsd:union> 				
+	    		<xsd:simpleType>
+			    	<xsd:restriction base="xsd:string">    		
+			    		<xsd:enumeration value="0.0.0.0"/>
+			    		<xsd:enumeration value="127.0.0.1"/>
+			    	</xsd:restriction>
+	    		</xsd:simpleType>
+	    		<xsd:simpleType>
+			    	<xsd:restriction base="xsd:string">    		
+			    		<xsd:pattern value="((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9]))">
+			    		</xsd:pattern>
+			    	</xsd:restriction>
+	    		</xsd:simpleType>
+    	   </xsd:union>  
+	    </xsd:simpleType>
+    </xsd:attribute>
+    
+ <xsd:attribute default="127.0.0.1" name="ipaddr" type="ipAddType"/>
+
+ <xsd:attributeGroup name="mAddr">
+    <xsd:attribute name="id" use="required">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:string">
+    				<xsd:length value="16"/>
+    				<xsd:pattern value="[0-9,A-F,a-f]{16}"/>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="modbus" use="required">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:unsignedByte">
+    			<xsd:minInclusive value="1"/>
+    			<xsd:maxInclusive value="254"/>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>   
+    <xsd:attribute name="alias" use="required">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:string">
+    			<xsd:maxLength value="16"/>
+    			<xsd:minLength value="0"/>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>
+     <xsd:attribute name="type" use="optional">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:string">
+    			<xsd:enumeration value="A"></xsd:enumeration>    			
+    			<xsd:enumeration value="C"></xsd:enumeration>
+    			<xsd:enumeration value="D"></xsd:enumeration>
+    			<xsd:enumeration value="I"></xsd:enumeration>
+    			<xsd:enumeration value="T"></xsd:enumeration>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+     </xsd:attribute>	
+     <xsd:attribute name="emulation" use="optional"
+     	default="000|000000|00">
+     	<xsd:simpleType>
+     		<xsd:restriction base="xsd:string">
+     			<xsd:pattern
+     				value="[0TN]{1,3}\|[0ACDIM]{1,6}\|[0EF]{1,2}">
+     			</xsd:pattern>
+      		</xsd:restriction>
+     	</xsd:simpleType>
+     </xsd:attribute>
+ </xsd:attributeGroup>
+
+    <xsd:attributeGroup name="ipAd">
+    	<xsd:attribute ref="ipaddr" use="required"/>
+    	<xsd:attribute name="port" default="502" type="xsd:unsignedShort"/>  
+    </xsd:attributeGroup>    
+
+    <xsd:simpleType name="ipAddType">
+    	<xsd:restriction base="xsd:string">  		
+	    	<xsd:pattern value="((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9]))">
+	    	</xsd:pattern>
+    	</xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:attribute name="protocol">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:string">
+    			<xsd:enumeration value="Modbus"></xsd:enumeration>
+    			<xsd:enumeration value="VectorL"></xsd:enumeration>
+    			<xsd:enumeration value="VectorA"></xsd:enumeration>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:attribute name="fullMirror" type="xsd:boolean" default="0"></xsd:attribute>
+
+    <xsd:attribute name="passes" default="1">
+    	<xsd:simpleType>
+    		<xsd:restriction base="xsd:unsignedByte">
+    			<xsd:maxInclusive value="16"></xsd:maxInclusive>
+    			<xsd:minInclusive value="0"></xsd:minInclusive>
+    		</xsd:restriction>
+    	</xsd:simpleType>
+    </xsd:attribute>
+</xsd:schema>

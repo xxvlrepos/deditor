@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+ 
+ <xsd:element name="modbus" type="modbusType"/>
+    
+ <xsd:complexType name="modbusType">
+    	<xsd:sequence>
+    		<xsd:element name="T" type="TType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="A" type="ADCType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="C" type="ADCType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="D" type="ADCType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="I" type="IType"   maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="M" type="ADCType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="E" type="VIRType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="F" type="VIRType" maxOccurs="1" minOccurs="0"></xsd:element>
+    		<xsd:element name="N" type="NType" maxOccurs="1" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="ver" type="xsd:string" use="optional"></xsd:attribute>
+    </xsd:complexType>    
+
+    <xsd:complexType name="TType">
+    	<xsd:sequence>
+    		<xsd:element ref="data" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="s1" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s2" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s3" type="xsd:hexBinary" use="required"></xsd:attribute>
+    </xsd:complexType>
+    
+    <xsd:complexType name="NType">
+    	<xsd:sequence>
+    		<xsd:element ref="data" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="s1" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s2" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s3" type="xsd:hexBinary" use="required"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="ADCType">
+    	<xsd:sequence>
+    		<xsd:element ref="data" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="s1" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s2" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s3" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s4" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s5" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s6" type="xsd:hexBinary" use="required"></xsd:attribute>
+    </xsd:complexType>
+    
+     <xsd:complexType name="IType">
+    	<xsd:sequence>
+    		<xsd:element ref="data" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="s1" type="xsd:hexBinary" use="required"></xsd:attribute>
+     </xsd:complexType>
+
+    <xsd:complexType name="VIRType">
+    	<xsd:sequence>
+    		<xsd:element ref="data" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="s1" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="s2" type="xsd:hexBinary" use="required"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="data" type="dataType"></xsd:element>
+    
+    <xsd:complexType name="dataType">
+    	<xsd:attribute name="id" type="xsd:hexBinary" use="required"></xsd:attribute>
+    	<xsd:attribute name="name" use="required">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:string">
+    				<xsd:maxLength value="10"></xsd:maxLength>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    	</xsd:attribute>
+    	<xsd:attribute name="divider" use="required">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:unsignedInt">
+    				<xsd:enumeration value="1"></xsd:enumeration>
+    				<xsd:enumeration value="10"></xsd:enumeration>
+    				<xsd:enumeration value="100"></xsd:enumeration>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    	</xsd:attribute>
+    	<xsd:attribute name="dimension" use="required">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:string">
+    				<xsd:maxLength value="10"></xsd:maxLength>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    	</xsd:attribute>
+    	<xsd:attribute name="title" use="required">
+    		<xsd:simpleType>
+    			<xsd:restriction base="xsd:string">
+    				<xsd:maxLength value="30"></xsd:maxLength>
+    			</xsd:restriction>
+    		</xsd:simpleType>
+    	</xsd:attribute>
+    	<xsd:attribute name="read" use="required" type="xsd:boolean" />
+    	
+    </xsd:complexType>
+
+
+
+
+</xsd:schema>

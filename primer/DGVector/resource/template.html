@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>report</TITLE>
+	<STYLE TYPE="text/css">
+	<!--
+		TD P.western { font-size: 10pt }
+		TABLE.print { page-break-inside: avoid;
+                              page-break-after: auto;
+			     }
+	-->
+	</STYLE>
+
+</HEAD>
+<BODY LANG="ru-RU">
+<TABLE CLASS="print" WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=256*>
+	<TR>
+		<TD WIDTH=100% HEIGHT=27 VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=4><B>Протокол
+			программирования Вектор-П</B></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<!-- BEGIN A_HEAD -->
+<TABLE CLASS="print" WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=7*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=8*>
+	<COL WIDTH=8*>
+	<COL WIDTH=8*>
+	<COL WIDTH=8*>
+	<COL WIDTH=8*>
+	<COL WIDTH=8*>
+	<COL WIDTH=1*>
+	<COL WIDTH=10*>
+	<COL WIDTH=11*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<TR>
+		<TD COLSPAN=21 WIDTH=100% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>Абсолютная
+			вибрация</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=3%>
+			<P CLASS="western" ALIGN=CENTER>№</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Имя</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Част. диап.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Прив. к тах.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Множи- тель</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Прив. к тах.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Множи- тель</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Прив. к тах.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Множи- тель</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=1%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Ин.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Парам.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Ед. изм.</FONT></P>
+		</TD>
+		<TD COLSPAN=9 WIDTH=47%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Уставки</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Гист.</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>LR</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>3L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>2L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>1L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>1H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>2H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>3H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>HR</FONT></P>
+		</TD>
+	</TR>
+	<!-- BEGIN A_BODY -->
+	<TR>
+		<TD {A_ROW} WIDTH=3%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{N}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{ADC.Name}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{AV.Filter}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.T}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.TN}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.T2}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.TN2}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.T3}</FONT></P>
+		</TD>
+		<TD {A_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.TN3}</FONT></P>
+		</TD>
+		<TD WIDTH=1% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{IND}</FONT></P>
+		</TD>
+		<TD WIDTH=4% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{PAR}</FONT></P>
+		</TD>
+		<TD WIDTH=4% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RAZ}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{LR}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{HR}</FONT></P>
+		</TD>
+	</TR>
+	<!-- BEGIN A_ADD -->	
+	<TR>
+		<TD WIDTH=1% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{IND}</FONT></P>
+		</TD>
+		<TD WIDTH=4% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{PAR}</FONT></P>
+		</TD>
+		<TD WIDTH=4% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RAZ}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{LR}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1L}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3H}</FONT></P>
+		</TD>
+		<TD WIDTH=5% VALIGN=TOP>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{HR}</FONT></P>
+		</TD>
+	</TR>
+	<!-- END A_ADD -->
+	<!-- END A_BODY -->
+</TABLE>
+<!-- END A_HEAD -->
+<!-- BEGIN C_HEAD -->
+<TABLE CLASS="print" WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=7*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=13*>
+	<COL WIDTH=14*>
+	<COL WIDTH=14*>
+	<COL WIDTH=1*>
+	<COL WIDTH=10*>
+	<COL WIDTH=11*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<COL WIDTH=13*>
+	<TR>
+		<TD COLSPAN=18 WIDTH=100%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>Относительная
+			вибрация</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=3%>
+			<P CLASS="western" ALIGN=CENTER>№</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Имя</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Част. диап.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Прив. к тах.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=6%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Множи- тель</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Лут-файл</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=1%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Ин.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Парам.</FONT></P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Ед. изм.</FONT></P>
+		</TD>
+		<TD COLSPAN=9 WIDTH=47%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Уставки</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Гист.</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>LR</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>3L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>2L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>1L</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>1H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>2H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>3H</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>HR</FONT></P>
+		</TD>
+	</TR>
+	<!-- BEGIN C_BODY -->
+	<TR>
+		<TD {C_ROW} WIDTH=3%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{N}</FONT></P>
+		</TD>
+		<TD {C_ROW} WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{ADC.Name}</FONT></P>
+		</TD>
+		<TD {C_ROW} WIDTH=7%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RV.Filter}</FONT></P>
+		</TD>
+		<TD {C_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.T}</FONT></P>
+		</TD>
+		<TD {C_ROW} WIDTH=6%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{VIBx.TN}</FONT></P>
+		</TD>
+		<TD {C_ROW} WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{LUTx}</FONT></P>
+		</TD>
+		<TD WIDTH=1%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{IND}</FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{PAR}</FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RAZ}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{LR}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{HR}</FONT></P>
+		</TD>
+	</TR>
+	<!-- BEGIN C_ADD -->
+	<TR>
+		<TD WIDTH=1%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{IND}</FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{PAR}</FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RAZ}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{LR}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1L}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{1H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{2H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{3H}</FONT></P>
+		</TD>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{HR}</FONT></P>
+		</TD>
+	</TR>
+	<!-- END C_ADD -->
+	<!-- END C_BODY -->
+</TABLE>
+<!-- END C_HEAD -->
+<!-- BEGIN D_HEAD -->
+<table class="print" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0" width="100%">
+	<col width="7*">
+	<col width="18*">
+	<col width="90*">
+	<col width="10*">
+	<col width="11*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<col width="13*">
+	<tbody><tr>
+		<td colspan="14" width="100%">
+			<p class="western" align="center"><font size="3"><b>Осевой
+			сдвиг</b></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" width="3%">
+			<p class="western" align="center">№</p>
+		</td>
+		<td rowspan="2" width="7%">
+			<p class="western" align="center"><font size="2">Имя</font></p>
+		</td>
+		<td rowspan="2" width="35%">
+			<p class="western" align="center"><font size="2">Лут-файл</font></p>
+		</td>
+		<td rowspan="2" width="4%">
+			<p class="western" align="center"><font size="2">Парам.</font></p>
+		</td>
+		<td rowspan="2" width="4%">
+			<p class="western" align="center"><font size="2">Ед. изм.</font></p>
+		</td>
+		<td colspan="9" width="47%">
+			<p class="western" align="center"><font size="2">Уставки</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">Гист.</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">LR</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">3L</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">2L</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">1L</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">1H</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">2H</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">3H</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">HR</font></p>
+		</td>
+	</tr>
+	<!-- BEGIN D_BODY -->
+	<tr>
+		<td width="3%">
+			<p class="western" align="center"><font size="2">{N}</font></p>
+		</td>
+		<td width="7%">
+			<p class="western" align="center"><font size="2">{ADC.Name}</font></p>
+		</td>
+		<td width="35%">
+			<p class="western" align="center"><font size="2">{LUTx}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{PAR}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{RAZ}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{H}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{LR}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{3L}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{2L}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{1L}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{1H}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{2H}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{3H}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{HR}</font></p>
+		</td>
+	</tr>
+	<!-- END D_BODY -->
+</tbody></table>
+<!-- END D_HEAD -->
+<!-- BEGIN V_HEAD -->
+<table class="print" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0" width="100%">
+	<col width="2*">
+	<col width="5*">
+	<col width="7*">
+	<col width="7*">
+	<col width="7*">
+	<col width="7*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<tbody><tr>
+		<td colspan="15" width="100%">
+			<p class="western" align="center"><font size="3"><b>Виртуальные каналы</b></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" width="2%">
+			<p class="western" align="center">№</p>
+		</td>
+		<td rowspan="2" width="5%">
+			<p class="western" align="center"><font size="2">Имя</font></p>
+		</td>
+		<td rowspan="2" width="7%">
+			<p class="western" align="center"><font size="2">Источник X</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Источник Y</font></p>
+		</td>
+		<td rowspan="2" width="7%">
+			<p class="western" align="center"><font size="2">Парам.</font></p>
+		</td>
+		<td rowspan="2" width="7%">
+			<p class="western" align="center"><font size="2">Ед. изм.</font></p>
+		</td>
+		<td colspan="9" width="36%">
+			<p class="western" align="center"><font size="2">Уставки</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">Гист.</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">LR</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">3L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">2L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">1L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">1H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">2H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">3H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">HR</font></p>
+		</td>
+	</tr>
+	<!-- BEGIN V_BODY -->
+	<tr>
+		<td width="2%">
+			<p class="western" align="center"><font size="2">{N}</font></p>
+		</td>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{V.Name}</font></p>
+		</td>
+		<td width="7%">
+			<p class="western" align="center"><font size="2">{VX}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{VY}</font></p>
+		</td>
+		<td width="7%">
+			<p class="western" align="center"><font size="2">{VP}</font></p>
+		</td>
+		<td width="7%">
+			<p class="western" align="center"><font size="2">{VI}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.LR}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.3L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.2L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.1L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.1H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.2H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.3H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{X.HR}</font></p>
+		</td>
+	</tr>
+	<!-- END V_BODY -->
+</tbody></table>
+<!-- END V_HEAD -->
+<!-- BEGIN T_HEAD -->
+<table class="print" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0" width="100%">
+	<col width="5*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="10*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<col width="4*">
+	<tbody><tr>
+		<td colspan="19" width="100%">
+			<p class="western" align="center"><font size="3"><b>Тахометры</b></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" width="5%">
+			<p class="western" align="center">№</p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Имя</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Режим</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Тип</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Число зубьев</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Отсечка</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Множи- тель</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Раб. обороты</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Парам.</font></p>
+		</td>
+		<td rowspan="2" width="10%">
+			<p class="western" align="center"><font size="2">Ед. изм.</font></p>
+		</td>
+		<td colspan="9" width="36%">
+			<p class="western" align="center"><font size="2">Уставки</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">Гист.</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">LR</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">3L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">2L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">1L</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">1H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">2H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">3H</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">HR</font></p>
+		</td>
+	</tr>
+	<!-- BEGIN T_BODY -->
+	<tr>
+		<td width="5%">
+			<p class="western" align="center"><font size="2">{N}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{T.Name}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TR}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TT}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TC}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TN}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TK}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">{TD}</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">F</font></p>
+		</td>
+		<td width="10%">
+			<p class="western" align="center"><font size="2">о.мин.</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.LR}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.3L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.2L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.1L}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.1H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.2H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.3H}</font></p>
+		</td>
+		<td width="4%">
+			<p class="western" align="center"><font size="2">{F.HR}</font></p>
+		</td>
+	</tr>
+	<!-- END T_BODY -->
+</tbody></table>
+<!-- END T_HEAD -->
+<!-- BEGIN GE_HEAD -->
+<TABLE class="print" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0" width="100%">
+
+	<TR>
+		<TD COLSPAN=12 width="100%" >
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>Групповые события</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD width="3%">
+			<P CLASS="western" ALIGN=CENTER>№</P>
+		</TD>
+		<TD width="7%">
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Комментарий</FONT></P>
+		</TD>
+
+		<TD width="90%" COLSPAN=10>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Выражение</FONT></P>
+		</TD>
+	
+	</TR>
+	<!-- BEGIN GE_BODY -->
+	<TR>
+		<TD>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{N}</FONT></P>
+		</TD>
+		<TD>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{GE_Name}</FONT></P>
+		</TD>
+		<TD COLSPAN=10>
+			<P CLASS="western" ALIGN=LEFT><FONT SIZE=2>{Exp}</FONT></P>
+		</TD>
+	</TR>
+	<!-- END GE_BODY -->
+</TABLE>
+<!-- END GE_HEAD -->
+
+<TABLE CLASS="print" WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+
+	<TR>
+		<TD {DAC_C} WIDTH=33%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>Токовые
+			выходы</B></FONT></P>
+		</TD>
+		<TD {RE_C} WIDTH=56%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>Реле</B></FONT></P>
+		</TD>
+		<TD ROWSPAN=2 COLSPAN=2 WIDTH=11%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><B>RS-485</B></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Параметры</FONT></P>
+		</TD>
+		<!-- BEGIN DAC_HEAD -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{NDAC}</FONT></P>
+		</TD>
+		<!-- END DAC_HEAD -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Параметры</FONT></P>
+		</TD>
+		<!-- BEGIN RE_HEAD -->
+		<TD WIDTH=51%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{NRE}</FONT></P>
+		</TD>
+		<!-- END RE_HEAD -->
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Хозяин</FONT></P>
+		</TD>
+		<!-- BEGIN DAC1_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC1}</FONT></P>
+		</TD>
+		<!-- END DAC1_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Событие</FONT></P>
+		</TD>
+		<!-- BEGIN RE1_S -->
+		<TD WIDTH=51%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RE1}</FONT></P>
+		</TD>
+		<!-- END RE1_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Протокол</FONT></P>
+		</TD>
+		<TD WIDTH=6%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RS1}</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Параметр</FONT></P>
+		</TD>
+		<!-- BEGIN DAC2_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC2}</FONT></P>
+		</TD>
+		<!-- END DAC2_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Задержка</FONT></P>
+		</TD>
+		<!-- BEGIN RE2_S -->
+		<TD WIDTH=51%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RE2}</FONT></P>
+		</TD>
+		<!-- END RE2_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Скорость</FONT></P>
+		</TD>
+		<TD WIDTH=6%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RS2}</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Минимум</FONT></P>
+		</TD>
+		<!-- BEGIN DAC3_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC3}</FONT></P>
+		</TD>
+		<!-- END DAC3_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Блокировка</FONT></P>
+		</TD>
+		<!-- BEGIN RE3_S -->
+		<TD WIDTH=51%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RE3}</FONT></P>
+		</TD>
+		<!-- END RE3_S -->
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Адрес</FONT></P>
+		</TD>
+		<TD WIDTH=6%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{RS3}</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Максимум</FONT></P>
+		</TD>
+		<!-- BEGIN DAC4_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC4}</FONT></P>
+		</TD>
+		<!-- END DAC4_S -->
+		<!--<TD ROWSPAN=4  COLSPAN=4 WIDTH=67%>-->
+		<TD ROWSPAN=4 {END_C}  WIDTH=67%>
+			<P CLASS="western" ALIGN=CENTER><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Выход</FONT></P>
+		</TD>
+		<!-- BEGIN DAC5_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC5}</FONT></P>
+		</TD>
+		<!-- END DAC5_S -->
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Событие</FONT></P>
+		</TD>
+		<!-- BEGIN DAC6_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC6}</FONT></P>
+		</TD>
+		<!-- END DAC6_S -->
+	</TR>
+	<TR>
+		<TD WIDTH=5%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>Ток</FONT></P>
+		</TD>
+		<!-- BEGIN DAC7_S -->
+		<TD WIDTH=28%>
+			<P CLASS="western" ALIGN=CENTER><FONT SIZE=2>{DAC7}</FONT></P>
+		</TD>
+		<!-- END DAC7_S -->
+	</TR>
+</TABLE>
+</BODY>
+</HTML>
